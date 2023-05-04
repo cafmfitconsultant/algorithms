@@ -16,6 +16,7 @@ class MaxBinaryHeap {
         while (index > 0) {
             let parentIndex = Math.floor((index - 1) / 2);
             let parent = this.values[parentIndex];
+            if (element <= parent) break;
             numbers[parentIndex] = element;
             numbers[index] = parent;
             index = parentIndex;
